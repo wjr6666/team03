@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>地址管理|JingLi</title>
+
+</head>
+<body class="site-home">
+<!--包含 头部模块-->
+<div th:replace="mall/common::head"></div>
+<!--页面主体内容-->
+<div class="layui-container" id="content">
+
+    <form class="layui-form" action="../address/submit.do">
+        <div class="layui-form-item">
+            <label class="layui-form-label">收货人：</label>
+            <div class="layui-input-block">
+                <input type="text" name="name" required="required" lay-verify="required"
+                       placeholder="请输入收货人"
+                       autocomplete="off" class="layui-input"/>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">电话：</label>
+            <div class="layui-input-block">
+                <input type="text" name="phone" required="required" lay-verify="required"
+                       placeholder="请输入收货人电话"
+                       autocomplete="off" class="layui-input"/>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">地址：</label>
+            <div class="layui-input-block">
+                <input type="text" name="addr" required="required" lay-verify="required"
+                       placeholder="请输入收货人地址"
+                       autocomplete="off" class="layui-input"/>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block" style="text-align: right;">
+                <span id="total" class="price1"></span>&emsp;
+                <button class="layui-btn layui-btn-lg layui-btn-radius layui-btn-danger"
+                        lay-submit="lay-submit" lay-filter="formDemo">提交
+                </button>
+            </div>
+        </div>
+    </form>
+
+</div>
+</body>
+</html>
